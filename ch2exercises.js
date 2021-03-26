@@ -1,9 +1,11 @@
+// Looping a triangle
 let hashtag = '#';
 for (let i = 0; i < 7; i++) {
     console.log(hashtag);
     hashtag = hashtag + '#';
 }
 
+// FizzBuzz
 let num = 0;
 for (let i = 0; i < 100; i++) {
     num++;
@@ -17,6 +19,8 @@ for (let i = 0; i < 100; i++) {
         console.log(num);
     }
 }
+
+// Chessboard
 
 let size = 20;
 let checker = '';
