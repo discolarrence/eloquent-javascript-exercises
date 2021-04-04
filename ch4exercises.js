@@ -2,9 +2,16 @@
 function range(start, end, step) {
     let numberArray = [];
     let num = start;
-    while (num <= end) {
-        numberArray.push(num);
-        num += step;
+    if (String(step).includes('-')) {
+        while (num >= end) {
+            numberArray.push(num);
+            num += step;
+        }
+    } else {
+        while (num <= end) {
+            numberArray.push(num);
+            num += step;
+        }
     }
     return numberArray;
 }
@@ -20,9 +27,27 @@ function sum(arr) {
 
 // Reversing an Array
 function reverseArray(arr) {
-    for (newArr of arr) {
-        newArr = []
-        newArr.push(arr.pop())
+    arrLength = arr.length
+    newArr = []
+    for (let i = 0; i < arrLength; i++) {
+        let poppedNum = arr.pop();
+        newArr.push(poppedNum);
     }
     return newArr
+}
+
+function reverseArrayInPlace(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        arr.splice(i, 0, arr.pop());
+    }
+    return arr;
+}
+
+// A List
+function arrayToList(arr){
+    let list = {};
+    for (let i = arr.length - 1; i >= 0; i--) {
+        list = {value: arr[i], rest: list};
+    }
+    return list;
 }
