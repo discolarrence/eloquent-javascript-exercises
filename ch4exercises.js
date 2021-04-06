@@ -51,3 +51,48 @@ function arrayToList(arr){
     }
     return list;
 }
+
+function listToArray(list){
+    let arr = [];
+    let li = list;
+    while (li) {
+        arr.push(li.value);
+        li = rest;
+    }
+    return arr;
+}
+
+function prepend(element, list){
+	list = {value: element, list} 
+	return list;
+}
+
+function nth(list, num){
+    if (!list) return undefined;
+    if (list == 0) return list.value;
+    else return nth(list.rest, num - 1);
+}
+
+// Deep Comparison
+function deepEqual(valueOne, valueTwo){
+    if (valueOne === valueTwo){
+        return true;
+    }
+	if (typeof valueOne !== "object" || valueOne == null || typeof valueTwo !== "object" || valueTwo == null){
+        return false;
+    } 
+    if (Object.keys(valueOne).length !== Object.keys(valueTwo).length){
+        return false;
+    }
+    let valueOneKeys = Object.keys(valueOne);
+    let valueTwoKeys = Object.keys(valueTwo);
+    for(let key of valueOneKeys){
+        if (!valueTwoKeys.includes(key)){
+            return false;
+        }
+        if (!deepEqual(valueOne[key], valueTwo[key])){
+            return false;
+        }
+    }
+    return true;
+}
