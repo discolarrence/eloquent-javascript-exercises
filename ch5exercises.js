@@ -13,4 +13,22 @@ function loop(value, test, update, body){
     }
 }
 
-loop(3, n => n > 0, n => n - 1, console.log);
+// Everything
+function everything(array) {
+    for(let element of array) {
+        if(!element) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function everythingSome(array) {
+    some((element, index) )
+}
+const x = 1;
+const y = 7;
+const z = 3;
+const adding = [x + y == 3, x + z == 4, y + z == 5];
+
+console.log(everything(adding));
