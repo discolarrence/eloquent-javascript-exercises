@@ -32,3 +32,10 @@ const z = 3;
 const adding = [x + y == 3, x + z == 4, y + z == 5];
 
 console.log(everything(adding));
+
+//Dominant Writing Direction
+
+function writingDirection(text) {
+    for (let character of text) {
+        if (character.ranges.some(([from, to]) => {
+          
