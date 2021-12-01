@@ -1,1 +1,1 @@
-Solutions to exercises in *Eloquent JavaScript" by Marijn Haverbeke
+Solutions to exercises in *Eloquent JavaScript* by Marijn Haverbeke
