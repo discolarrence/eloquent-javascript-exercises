@@ -1,1 +1,0 @@
-### Exercises from Eloquent JavaScript
